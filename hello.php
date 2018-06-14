@@ -1,4 +1,4 @@
 <?php
-echo "Hello world Test"
+echo "Hello world Test";
 $a=0;
 ?>
