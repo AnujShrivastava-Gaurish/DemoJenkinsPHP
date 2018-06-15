@@ -66,7 +66,7 @@
 
     <target name="composer-install" depends="composer.check" unless="composer.lock.exist.in.gitignore" description="Installing dependencies">
         <echo>Installing dependencies</echo>
-        <exec executable="composer" failonerror="true">
+        <exec executable="composer" failonerror="true" spawn="true">
             <arg value="install" />
         </exec>
     </target>
