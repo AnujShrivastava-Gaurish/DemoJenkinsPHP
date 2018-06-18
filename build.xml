@@ -1,14 +1,14 @@
-<project name="demoJenkinsPHP" default="full-build" basedir=".">
+<project name="name-of-project" default="full-build" basedir=".">
 
     <!--location of executables-->
-    <property name="pdepend" value="/home/ubuntu/.composer/vendor/bin/pdepend"/>
-    <property name="phpcpd" value="/home/ubuntu/.composer/vendor/bin/phpcpd"/>
-    <property name="phploc" value="/home/ubuntu/.composer/vendor/bin/phploc"/>
-    <property name="phpunit" value="/home/ubuntu/.composer/vendor/bin/phpunit"/>
-    <property name="phpmd" value="/home/ubuntu/.composer/vendor/bin/phpmd"/>
+    <property name="pdepend" value="/usr/bin/pdepend"/>
+    <property name="phpcpd" value="/usr/bin/phpcpd"/>
+    <property name="phploc" value="/usr/bin/phploc"/>
+    <property name="phpunit" value="/usr/bin/phpunit"/>
+    <property name="phpmd" value="/usr/bin/phpmd"/>
     <property name="phpdox" value="/usr/bin/phpdox"/>
     <property name="phpcs" value="/usr/bin/phpcs"/>
-    <property name="phpmetrics" value="/home/ubuntu/.composer/vendor/bin/phpmetrics"/>
+    <property name="phpmetrics" value="/usr/bin/phpmetrics"/>
 
     <target name="full-build"
             depends="prepare, static-analysis, phpunit,phpdox,phpmetrics, -check-failure"
@@ -79,12 +79,12 @@
         <apply executable="php" taskname="lint">
             <arg value="-l" />
 
-            <fileset dir="${basedir}/src">
+            <fileset dir="${basedir}/build/src">
                 <include name="**/*.php" />
                 <modified />
             </fileset>
 
-            <fileset dir="${basedir}/tests">
+            <fileset dir="${basedir}/build/tests">
                 <include name="**/*.php" />
                 <modified />
             </fileset>
