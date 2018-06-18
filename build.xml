@@ -1,14 +1,14 @@
 <project name="demoJenkinsPHP" default="full-build" basedir=".">
 
     <!--location of executables-->
-    <property name="pdepend" value="/var/lib/jenkins/workspace.composer/vendor/bin/pdepend"/>
-    <property name="phpcpd" value="/var/lib/jenkins/workspace.composer/vendor/bin/phpcpd"/>
-    <property name="phploc" value="/var/lib/jenkins/workspace.composer/vendor/bin/phploc"/>
-    <property name="phpunit" value="/var/lib/jenkins/workspace.composer/vendor/bin/phpunit"/>
-    <property name="phpmd" value="/var/lib/jenkins/workspace.composer/vendor/bin/phpmd"/>
+    <property name="pdepend" value="/usr/bin/pdepend"/>
+    <property name="phpcpd" value="/usr/bin/phpcpd"/>
+    <property name="phploc" value="/usr/bin/phploc"/>
+    <property name="phpunit" value="/usr/bin/phpunit"/>
+    <property name="phpmd" value="/usr/bin/phpmd"/>
     <property name="phpdox" value="/usr/bin/phpdox"/>
     <property name="phpcs" value="/usr/bin/phpcs"/>
-    <property name="phpmetrics" value="/var/lib/jenkins/workspace.composer/vendor/bin/phpmetrics"/>
+    <property name="phpmetrics" value="/usr/bin/phpmetrics"/>
 
     <target name="full-build"
             depends="prepare, static-analysis, phpunit,phpdox,phpmetrics, -check-failure"
