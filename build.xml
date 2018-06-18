@@ -1,4 +1,4 @@
-<project name="name-of-project" default="full-build" basedir=".">
+<project name="demoJenkinsPHP" default="full-build" basedir=".">
 
     <!--location of executables-->
     <property name="pdepend" value="/home/vagrant/.composer/vendor/bin/pdepend"/>
