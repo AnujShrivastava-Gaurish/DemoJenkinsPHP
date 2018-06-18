@@ -8,8 +8,7 @@
     <property name="phpmd" value="/usr/bin/phpmd"/>
     <property name="phpdox" value="/usr/bin/phpdox"/>
     <property name="phpcs" value="/usr/bin/phpcs"/>
-    <!--<property name="phpmetrics" value="/usr/bin/phpmetrics"/>-->
-
+    <property name="phpmetrics" value="phpmetrics"/>
     <target name="full-build"
             depends="prepare, static-analysis, phpunit,phpdox, -check-failure"
             description="Performs static analysis, runs tests and generates project dpcumentation">
@@ -278,6 +277,20 @@
         <property name="phpunit.done" value="true"/>
     </target>
 
+    <!--generate documentation-->
+
+    <!--<target name="phpmetrics"
+            unless="phpmetrics.done"
+            description="generate phpmetrics reports">
+        <exec executable="${phpmetrics}" taskname="phpmetrics">
+            <arg value="--report-xml=${basedir}/build/logs/phpmetrics.xml"/>
+            <arg value="--violations-xml=${basedir}/build/logs/violations.xml"/>
+            <arg value="--report-html=${basedir}/build/logs/quality.html"/>
+            <arg path="${basedir}/src"/>
+        </exec>
+
+        <property name="phpmetrics.done" value="true"/>
+    </target>-->
 
     <target name="phpdox"
             unless="phpdox.done"
