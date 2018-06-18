@@ -279,7 +279,7 @@
 
     <!--generate documentation-->
 
-    <!--<target name="phpmetrics"
+    <target name="phpmetrics"
             unless="phpmetrics.done"
             description="generate phpmetrics reports">
         <exec executable="${phpmetrics}" taskname="phpmetrics">
@@ -290,7 +290,7 @@
         </exec>
 
         <property name="phpmetrics.done" value="true"/>
-    </target>-->
+    </target>
 
     <target name="phpdox"
             unless="phpdox.done"
