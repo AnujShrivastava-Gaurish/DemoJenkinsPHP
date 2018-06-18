@@ -11,12 +11,12 @@
     <!--<property name="phpmetrics" value="/usr/bin/phpmetrics"/>-->
 
     <target name="full-build"
-            depends="prepare, static-analysis, phpunit,phpdox,phpmetrics, -check-failure"
+            depends="prepare, static-analysis, phpunit,phpdox, -check-failure"
             description="Performs static analysis, runs tests and generates project dpcumentation">
     </target>
 
     <target name="full-build-parallel"
-            depends="prepare,static-analysis-parallel,phpunit,phpdox,phpmetrics, -check-failure"
+            depends="prepare,static-analysis-parallel,phpunit,phpdox, -check-failure"
             description="Performs static analysis (executing the tools in parallel), runs the tests, and generates project documentation">
     </target>
 
