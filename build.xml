@@ -1,14 +1,14 @@
 <project name="demoJenkinsPHP" default="full-build" basedir=".">
 
     <!--location of executables-->
-    <property name="pdepend" value="/home/vagrant/.composer/vendor/bin/pdepend"/>
-    <property name="phpcpd" value="/home/vagrant/.composer/vendor/bin/phpcpd"/>
-    <property name="phploc" value="/home/vagrant/.composer/vendor/bin/phploc"/>
-    <property name="phpunit" value="/home/vagrant/.composer/vendor/bin/phpunit"/>
-    <property name="phpmd" value="/home/vagrant/.composer/vendor/bin/phpmd"/>
+    <property name="pdepend" value="/DemoJenkinsPhp/.composer/vendor/bin/pdepend"/>
+    <property name="phpcpd" value="/DemoJenkinsPhp/.composer/vendor/bin/phpcpd"/>
+    <property name="phploc" value="/DemoJenkinsPhp/.composer/vendor/bin/phploc"/>
+    <property name="phpunit" value="/DemoJenkinsPhp/.composer/vendor/bin/phpunit"/>
+    <property name="phpmd" value="/DemoJenkinsPhp/.composer/vendor/bin/phpmd"/>
     <property name="phpdox" value="/usr/bin/phpdox"/>
     <property name="phpcs" value="/usr/bin/phpcs"/>
-    <property name="phpmetrics" value="/home/vagrant/.composer/vendor/bin/phpmetrics"/>
+    <property name="phpmetrics" value="/DemoJenkinsPhp/.composer/vendor/bin/phpmetrics"/>
 
     <target name="full-build"
             depends="prepare, static-analysis, phpunit,phpdox,phpmetrics, -check-failure"
