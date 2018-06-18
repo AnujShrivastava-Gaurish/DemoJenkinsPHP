@@ -1,6 +1,7 @@
 <?php
 echo "Hello world";
-$a=0;$b=1;
+$a=0;
+$b=1;
+$b=1;
 echo $a;
-$cccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc=3;
-?>
+
