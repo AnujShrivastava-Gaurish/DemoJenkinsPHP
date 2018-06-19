@@ -20,7 +20,7 @@
     </target>
 
     <target name="quick-build"
-            depends="prepare, lint, phpunit-no-coverage"
+            depends="prepare, lint"
             description="Performs a lint check and runs tests without generating codce coverage reports">
     </target>
 
