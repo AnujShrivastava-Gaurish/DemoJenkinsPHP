@@ -264,7 +264,7 @@
 
     <!--perform phpunit tests without coverage report-->
 
-    <target name="phpunit-no-coverage"
+    <!--<target name="phpunit-no-coverage"
             unless="phpunit.done"
             depends="prepare"
             description="Run unit tests with PHPUnit (without generating code coverage reports)">
@@ -275,7 +275,7 @@
         </exec>
 
         <property name="phpunit.done" value="true"/>
-    </target>
+    </target>-->
 
     <!--generate documentation-->
 
