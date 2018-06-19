@@ -262,20 +262,6 @@
         <property name="phpunit.done" value="true"/>
     </target>
 
-    <!--perform phpunit tests without coverage report-->
-
-    <!--<target name="phpunit-no-coverage"
-            unless="phpunit.done"
-            depends="prepare"
-            description="Run unit tests with PHPUnit (without generating code coverage reports)">
-        <exec executable="${phpunit}" failonerror="true" taskname="phpunit">
-            <arg value="--configuration"/>
-            <arg path="${basedir}/phpunit.xml"/>
-            <arg value="--no-coverage"/>
-        </exec>
-
-        <property name="phpunit.done" value="true"/>
-    </target>-->
 
     <!--generate documentation-->
 
