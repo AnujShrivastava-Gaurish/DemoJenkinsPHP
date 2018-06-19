@@ -32,6 +32,17 @@ class Device extends AbstractDevice
         $stack = array();
         $this->assertEquals(0, count($stack));
         $this->assertEquals(0, count($stack));
+        $this->assertEquals(0, count($stack));
+        $this->assertEquals(0, count($stack));
+        $this->assertEquals(0, count($stack));
+        $this->assertEquals(0, count($stack));
+        $this->assertEquals(0, count($stack));
+        $this->assertEquals(0, count($stack));
+        $this->assertEquals(0, count($stack));
+        $this->assertEquals(0, count($stack));
+        $this->assertEquals(0, count($stack));
+        $this->assertEquals(0, count($stack));
+        $this->assertEquals(0, count($stack));
 
         array_push($stack, 'foo');
         $this->assertEquals('foo', $stack[count($stack)-1]);
